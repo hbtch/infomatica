@@ -1,0 +1,53 @@
+.header {
+    position: fixed;
+    top: 0;
+    max-width: 100%;
+    width: 1920px;
+    height: 70px;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+.icon {
+    color: white;
+}
+
+
+.leftLinks a {
+    padding-left: 0;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.centerLinks {
+    display: flex;
+    justify-content: center; 
+    gap: 50px;
+}
+
+.centerLinks a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.rightLinks {
+    display: flex;
+}
+
+.rightLinks a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    margin-right: 20px; 
+}
+
+.nav a:hover {
+    color: #ffa500; 
+}

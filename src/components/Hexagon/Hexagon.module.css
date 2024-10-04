@@ -1,0 +1,51 @@
+.hexagon {
+    position: absolute;
+    width: 150px;
+    height: 130px;
+    background-color: #fff;
+    clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.central {
+    width: 200px;
+    height: 180px;
+    background-color: #ffd700;
+}
+
+.hexagonContent {
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.hexagon:nth-child(1) { 
+    transform: translate(-300px, 300px);  
+}
+.hexagon:nth-child(2) { 
+    transform: translate(-150px, 150px);
+}
+.hexagon:nth-child(3) { 
+    transform: translate(0, 0);
+}
+.hexagon:nth-child(4) { 
+    transform: translate(150px, -150px);
+}
+.hexagon:nth-child(5) { 
+    transform: translate(300px, -300px);
+}
+
+.central {
+    transform: scale(1.2) translate(0, 0);
+}
