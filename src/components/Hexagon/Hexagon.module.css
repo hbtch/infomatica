@@ -1,7 +1,7 @@
 .hexagon {
     position: absolute;
-    width: 150px;
-    height: 130px;
+    width: 160px;
+    height: 140px;
     background-color: #fff;
     clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
     display: flex;
@@ -12,40 +12,100 @@
 }
 
 .central {
-    width: 200px;
-    height: 180px;
+    width: 210px;
+    height: 190px;
     background-color: #ffd700;
+    z-index: 10;
 }
 
 .hexagonContent {
     text-align: center;
+    padding: 5px;
 }
 
-button {
-    margin-top: 10px;
-    padding: 5px 10px;
+.hexagonContent h2 {
+    margin: 5px 0;
+}
+
+.hexagonContent p {
+    margin: 2px 0;
+}
+
+.buyButton {
+    padding: 10px 15px;
     background-color: #000;
-    color: #fff;
+    color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s;
 }
 
-.hexagon:nth-child(1) { 
-    transform: translate(-300px, 300px);  
+.hexagon:nth-child(1) {
+    transform: translate(300px, -300px); 
 }
-.hexagon:nth-child(2) { 
-    transform: translate(-150px, 150px);
-}
-.hexagon:nth-child(3) { 
-    transform: translate(0, 0);
-}
-.hexagon:nth-child(4) { 
+
+.hexagon:nth-child(2) {
     transform: translate(150px, -150px);
 }
-.hexagon:nth-child(5) { 
-    transform: translate(300px, -300px);
+
+.hexagon:nth-child(3) {
+    transform: translate(0, 0);
+}
+
+.hexagon:nth-child(4) {
+    transform: translate(-150px, 150px); 
+}
+
+.hexagon:nth-child(5) {
+    transform: translate(-300px, 300px); 
 }
 
 .central {
     transform: scale(1.2) translate(0, 0);
+}
+
+@media (max-width: 768px) {
+    .hexagon {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 160px;
+        height: 140px;
+    }
+    .buyButton {
+        padding: 5px 5px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 414px) {
+    .hexagon {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        transform: none;
+        width: 160px;
+        height: 140px;
+    }
+
+    .hexagon:nth-child(1),
+    .hexagon:nth-child(2),
+    .hexagon:nth-child(3),
+    .hexagon:nth-child(4),
+    .hexagon:nth-child(5) {
+        transform: none;
+    }
+
+    .central {
+        transform: none;
+    }
+
+    .buyButton {
+        padding: 5px 5px;
+        border-radius: 5px;
+    }
 }

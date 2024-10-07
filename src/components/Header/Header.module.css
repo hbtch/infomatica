@@ -1,26 +1,36 @@
 .header {
-    position: fixed;
     top: 0;
     max-width: 100%;
     width: 1920px;
-    height: 70px;
-    background-color: bisque;
+    height: 80px;
+    background-color: #0a0c29;
+    position: relative;
     display: flex;
     justify-content: space-around; 
     align-items: center;
 }
 
-.icon {
+.openNewIcon {
     color: white;
 }
 
+.menuIcon {
+    color: white;
+    position: absolute;
+    top: 25px; 
+    right: 40px; 
+    cursor: pointer;
+    z-index: 10;
+}
 
-.leftLinks a {
-    padding-left: 0;
-    color: black;
+.leftLinks a,
+.centerLinks a,
+.rightLinks a {
+    display: inline-block;
+    color: white;
     text-decoration: none;
     font-size: 16px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .centerLinks {
@@ -29,25 +39,144 @@
     gap: 50px;
 }
 
-.centerLinks a {
-    color: black;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
 .rightLinks {
     display: flex;
+    gap: 10px;
 }
 
-.rightLinks a {
-    color: black;
+.rightLinks .icon {
+    margin-right: 10px;
+}
+
+.rightLinks .menuIcon {
+    margin-left: 20px;
+}
+
+.leftLinks a:hover,
+.centerLinks a:hover,
+.rightLinks a:hover {
+    color: #ffa500;
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ffa500, #ff6347);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.openNewIcon:hover {
+    color: #ffa500;
+}
+
+.menuIcon:hover {
+    color: #ffa500;
+}
+
+.menuDrawer {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #0a0c29;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    visibility: hidden;
+    opacity: 0; 
+}
+
+.menuDrawerOpen {
+    right: 0; 
+    visibility: visible;
+    opacity: 1;
+}
+
+.menuDrawer nav a {
+    color: white;
     text-decoration: none;
     font-size: 16px;
+    margin-bottom: 10px;
     transition: color 0.3s ease;
-    margin-right: 20px; 
 }
 
-.nav a:hover {
-    color: #ffa500; 
+.menuDrawer nav a:hover {
+    color: #ffa500;
+}
+
+@media (min-width: 2560px) {
+    .header {
+        width: 2560px;
+        height: 100px;
+    }
+
+    .leftLinks a, .centerLinks a, .rightLinks a {
+        font-size: 18px;
+    }
+
+    .centerLinks {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .header {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .centerLinks {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    .centerLinks {
+        gap: 20px;
+    }
+
+    .leftLinks a, .centerLinks a, .rightLinks a {
+        font-size: 14px;
+    }
+
+    .menuIcon {
+        top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 20px;
+    }
+
+    .menuDrawer {
+        top: 20px;
+    }
+
+    .menuDrawer nav a {
+        background-color:#ffa500;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+    }
+
+    .leftLinks,
+    .centerLinks,
+    .rightLinks {
+        display: none;
+    }
+
+    .menuIcon {
+        position: absolute;
+        color: white;
+        top: 10px;
+        right: 20px;
+    }
 }

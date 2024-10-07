@@ -1,11 +1,11 @@
-import React from "react";
 import styles from "./Hexagon.module.css";
 
-const Hexagon = ({ event, isCentral, onClick }) => {
+const Hexagon = ({ event, isCentral, onClick, style }) => {
     return (
         <div
             className={`${styles.hexagon} ${isCentral ? styles.central : ""}`}
             onClick={onClick}
+            style={style}
         >
             <div className={styles.hexagonContent}>
                 <p>{event.date}</p>
@@ -13,7 +13,7 @@ const Hexagon = ({ event, isCentral, onClick }) => {
                     <>
                         <h2>{event.match}</h2>
                         <p>{event.time}</p>
-                        <button>{event.button}</button>
+                        <button className={styles.buyButton}>Купить билет</button>
                     </>
                 )}
             </div>

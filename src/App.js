@@ -1,10 +1,10 @@
-import Infomatica from './pages/Infomatica'
+import Page from './pages/Page'
 import './style.css'
 
 function App() {
   return (
     <div>
-      <Infomatica />
+      <Page />
     </div>
   )
 }
