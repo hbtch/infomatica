@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/infomatica/static/css/main.2ddf21af.css",
+    "main.js": "/infomatica/static/js/main.e09e091c.js",
+    "index.html": "/infomatica/index.html",
+    "main.2ddf21af.css.map": "/infomatica/static/css/main.2ddf21af.css.map",
+    "main.e09e091c.js.map": "/infomatica/static/js/main.e09e091c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ddf21af.css",
+    "static/js/main.e09e091c.js"
+  ]
+}
