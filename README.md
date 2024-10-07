@@ -11,6 +11,6 @@
 -Клонируйте репозиторий локально, установите расширение Live Server и запустите проект:
 
 ```bash
-https://github.com/hbtch/HackathonLayout.git
+https://github.com/hbtch/infomatica.git
 
 
